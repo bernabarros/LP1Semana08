@@ -21,7 +21,12 @@ namespace GameUnit
         public void Attack(Unit u)
         {
             XP++;
-            u.Health = -AttackPower;
+            u.Health = AttackPower;
+        }
+        public override string ToString()
+        {
+            return $"{this.GetType().Name}: HP={this.Health} COST={this.Cost}" +
+            $" AP={this.AttackPower} XP={this.XP}";
         }
     }
 }
